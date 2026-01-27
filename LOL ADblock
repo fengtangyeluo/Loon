@@ -1,0 +1,8 @@
+#!name=掌上英雄联盟 去开屏广告
+#!desc=拦截掌上英雄联盟开屏与推荐广告
+#!author=yourname
+
+[Rewrite]
+^https?:\/\/us\.l\.qq\.com\/exapp reject
+^https?:\/\/ossweb-img\.qq\.com\/upload\/adw\/image\/[0-9]{3}\/202[0-9]{5}\/[a-z0-9]{32}\.(jpg|jpeg) reject
+^https?:\/\/mlol\.qt\.qq\.com\/go\/recommend\/(?!v2\/platactivity.*) reject
