@@ -1,8 +1,10 @@
-#!name=两步路去广告
-#!desc=拦截两步路开屏广告、弹窗和推广接口
-#!author=ChatGPT
+#!name=两步路
+#!desc=拦截两步路广告、弹窗和推广接口
+#!author=你的名字
 #!homepage=https://github.com/你的用户名/你的仓库
-#!icon=https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Map.png
+#!icon=https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/gif/naisi-01.gif
+#!raw-url=https://github.com/fengtangyeluo/Loon/edit/main/liangbulu.lpx
+#!date=2026-03-26
 
 [Rule]
 DOMAIN-SUFFIX,admobile.top,REJECT
