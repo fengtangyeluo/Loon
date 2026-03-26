@@ -1,9 +1,6 @@
 #!name=两步路
 #!desc=拦截两步路广告、弹窗和推广接口
-#!author=你的名字
-#!homepage=https://github.com/fengtangyeluo/Loon
 #!raw-url=https://raw.githubusercontent.com/fengtangyeluo/Loon/refs/heads/main/liangbulu.lpx
-#!date=2026-03-26
 
 [Rule]
 DOMAIN-SUFFIX,admobile.top,REJECT
