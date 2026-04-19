@@ -1,8 +1,11 @@
-#!name=掌上英雄联盟 去开屏广告
-#!desc=拦截掌上英雄联盟开屏与推荐广告
-#!author=yourname
+#!name = 掌上英雄联盟 开屏广告拦截
+#!desc = 拦截开屏启动广告、腾讯广告图片、非必要推荐接口 | 无MITM 无证书
+#!author = 𝑨梦 𝑪𝒉𝒙𝒎𝟏𝟎𝟐𝟑
+#!tag = 去广告,LOL,掌盟
+#!loon_version = 4.0.0
+#!update_url = https://raw.githubusercontent.com/LoonPluginHub/Loon-Rule/main/LeagueOfLegends-Ad.block.plugin
 
-[Rewrite]
-^https?:\/\/us\.l\.qq\.com\/exapp reject
-^https?:\/\/ossweb-img\.qq\.com\/upload\/adw\/image\/[0-9]{3}\/202[0-9]{5}\/[a-z0-9]{32}\.(jpg|jpeg) reject
-^https?:\/\/mlol\.qt\.qq\.com\/go\/recommend\/(?!v2\/platactivity.*) reject
+[Rule]
+URL-REGEX,^https?:\/\/us\.l\.qq\.com\/exapp,REJECT-200
+URL-REGEX,^https?:\/\/ossweb-img\.qq\.com\/upload\/adw\/image\/[0-9]{3}\/202[0-9]{5}\/[a-z0-9]{32}\.(jpg|jpeg),REJECT-200
+URL-REGEX,^https?:\/\/mlol\.qt\.qq\.com\/go\/recommend\/(?!v2\/platactivity.*),REJECT
