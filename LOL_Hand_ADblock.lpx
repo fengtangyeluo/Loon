@@ -1,11 +1,12 @@
-#!name = 掌上英雄联盟 开屏广告拦截
-#!desc = 拦截开屏启动广告、腾讯广告图片、非必要推荐接口 | 无MITM 无证书
-#!author = 𝑨梦 𝑪𝒉𝒙𝒎𝟏𝟎𝟐𝟑
-#!tag = 去广告,LOL,掌盟
-#!loon_version = 4.0.0
-#!update_url = https://raw.githubusercontent.com/LoonPluginHub/Loon-Rule/main/LeagueOfLegends-Ad.block.plugin
+#!name=掌上英雄联盟去广告
+#!desc=掌盟开屏、首页信息流、推荐广告、弹窗广告屏蔽
+#!tag=Game
+#!hostname=us.l.qq.com, ossweb-img.qq.com, mlol.qt.qq.com
 
-[Rule]
-URL-REGEX,^https?:\/\/us\.l\.qq\.com\/exapp,REJECT-200
-URL-REGEX,^https?:\/\/ossweb-img\.qq\.com\/upload\/adw\/image\/[0-9]{3}\/202[0-9]{5}\/[a-z0-9]{32}\.(jpg|jpeg),REJECT-200
-URL-REGEX,^https?:\/\/mlol\.qt\.qq\.com\/go\/recommend\/(?!v2\/platactivity.*),REJECT
+[Rewrite]
+# 开屏广告接口拦截
+^https?:\/\/us\.l\.qq\.com\/exapp url reject-200
+# 广告图片资源拦截
+^https?:\/\/ossweb-img\.qq\.com\/upload\/adw\/image\/[0-9]{3}\/202[0-9]{5}\/[a-z0-9]{32}\.(jpg|jpeg) url reject-200
+# 首页推荐信息流广告
+^https?:\/\/mlol\.qt\.qq\.com\/go\/recommend\/(?!v2\/platactivity.*) url reject-200
